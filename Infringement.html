@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cease and Desist for Intellectual Property Infringement</title>
+    <link rel="stylesheet" href="Infringement.css">
+    <script src="Infringement.js" defer></script>
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Cease and Desist for Intellectual Property Infringement</h1>
+    </header>
+
+    <main>
+        <!-- Your Details Section -->
+        <section id="your-details">
+            <h2>Your Details</h2>
+            <form id="ceaseDesistForm">
+                <label for="yourName">Your Name/Company:</label>
+                <input type="text" id="yourName" name="yourName" required><br>
+
+                <label for="yourAddress">Your Address:</label>
+                <input type="text" id="yourAddress" name="yourAddress" required><br>
+
+                <label for="yourCityState">City, State, Zip Code:</label>
+                <input type="text" id="yourCityState" name="yourCityState" required><br>
+
+                <label for="yourPhone">Phone Number:</label>
+                <input type="tel" id="yourPhone" name="yourPhone" required><br>
+
+                <label for="yourEmail">Email Address:</label>
+                <input type="email" id="yourEmail" name="yourEmail" required><br>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required><br>
+            </form>
+        </section>
+
+        <!-- Recipient Details Section -->
+        <section id="recipient">
+            <h2>Recipient Details</h2>
+            <label for="recipientName">Recipient Name:</label>
+            <input type="text" id="recipientName" name="recipientName" required><br>
+
+            <label for="recipientAddress">Recipient Address:</label>
+            <input type="text" id="recipientAddress" name="recipientAddress" required><br>
+
+            <label for="recipientCityState">City, State, Zip Code:</label>
+            <input type="text" id="recipientCityState" name="recipientCityState" required><br>
+
+            <label for="recipientPhone">Phone Number:</label>
+            <input type="tel" id="recipientPhone" name="recipientPhone" required><br>
+
+            <label for="recipientEmail">Email Address:</label>
+            <input type="email" id="recipientEmail" name="recipientEmail" required><br>
+
+            <label for="letterSubject">Subject:</label>
+            <input type="text" id="letterSubject" name="letterSubject" value="Cease and Desist for Intellectual Property Infringement" readonly><br>
+        </section>
+
+        <!-- Description of Infringement -->
+        <section id="infringement">
+            <h2>Description of Infringement</h2>
+            <label for="infringementDesc">Describe the IP being infringed (patent, trademark, copyright, etc.):</label>
+            <textarea id="infringementDesc" name="infringementDesc" required></textarea><br>
+
+            <label for="infringementDetails">Violation of applicable law:</label>
+            <textarea id="infringementDetails" name="infringementDetails" required></textarea><br>
+
+            <label for="infringementDetected">Date Infringement Detected:</label>
+            <input type="date" id="infringementDetected" name="infringementDetected" required><br>
+
+            <h3>Details of Infringement:</h3>
+            <label for="ipType">Type of IP:</label>
+            <input type="text" id="ipType" name="ipType" placeholder="e.g., Patent, Trademark, Copyright, etc." required><br>
+
+            <label for="ipRegNumber">IP Registration Number:</label>
+            <input type="text" id="ipRegNumber" name="ipRegNumber" required><br>
+
+            <label for="ipDescription">Description of IP:</label>
+            <textarea id="ipDescription" name="ipDescription" required></textarea><br>
+
+            <label for="infringingActivity">Infringing Activity:</label>
+            <textarea id="infringingActivity" name="infringingActivity" required></textarea><br>
+        </section>
+
+        <!-- Legal Basis -->
+        <section id="legal-basis">
+            <h2>Legal Basis</h2>
+            <label for="legalBasis">Applicable IP Law (e.g., Patents Act, Trademarks Act):</label>
+            <textarea id="legalBasis" name="legalBasis" required></textarea><br>
+
+            <h3>Legal Remedies Entitled:</h3>
+            <ul>
+                <li>Immediate cessation of infringing activity</li>
+                <li>Financial damages for unauthorized use</li>
+                <li>Injunctive relief to prevent further infringement</li>
+            </ul>
+        </section>
+
+        <!-- Cease and Desist Demand -->
+        <section id="demand">
+            <h2>Cease and Desist Demand</h2>
+            <p>I hereby demand that you:</p>
+            <label for="demandDesc">Describe specific actions the infringer should stop:</label>
+            <textarea id="demandDesc" name="demandDesc" required></textarea><br>
+
+            <label for="timeframe">Timeframe to remove infringing materials (in days):</label>
+            <input type="number" id="timeframe" name="timeframe" required><br>
+
+            <label for="confirmationTimeframe">Timeframe for written confirmation (in days):</label>
+            <input type="number" id="confirmationTimeframe" name="confirmationTimeframe" required><br>
+        </section>
+
+        <!-- Consequences of Non-Compliance -->
+        <section id="consequences">
+            <h2>Consequences of Non-Compliance</h2>
+            <label for="consequencesDesc">Describe consequences for non-compliance (e.g., seeking injunctive relief, lawsuit for damages):</label>
+            <textarea id="consequencesDesc" name="consequencesDesc" required></textarea><br>
+
+            <label for="complianceTimeframe">Compliance deadline (in days):</label>
+            <input type="number" id="complianceTimeframe" name="complianceTimeframe" required><br>
+        </section>
+
+        <!-- Contact Information -->
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <label for="contactPhone">Phone Number:</label>
+            <input type="tel" id="contactPhone" name="contactPhone" required><br>
+
+            <label for="contactEmail">Email Address:</label>
+            <input type="email" id="contactEmail" name="contactEmail" required><br>
+        </section>
+
+        <section id="signature">
+            <h2>Signature</h2>
+            <label for="yourSignature">Your Signature:</label>
+            <input type="text" id="yourSignature" name="yourSignature" required><br>
+
+            <label for="yourTitle">Your Name or Title:</label>
+            <input type="text" id="yourTitle" name="yourTitle" required><br>
+
+            <label for="yourCompany">Company Name (if applicable):</label>
+            <input type="text" id="yourCompany" name="yourCompany"><br>
+
+            <button type="submit">Generate Cease and Desist Letter</button>
+        </section>
+    </main> 
+
+    <footer>
+        <p>&copy; [Year] [Your Company Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>

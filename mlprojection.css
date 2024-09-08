@@ -1,0 +1,115 @@
+/* General Styling */
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Arial', sans-serif; */
+}
+
+body {
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+header p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.progress-bar-fill {
+    width: 0;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Form */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #999;
+}

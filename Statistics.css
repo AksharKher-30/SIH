@@ -1,0 +1,135 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Form Styles */
+form {
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4caf50;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button Styles */
+button.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Result Section */
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #eef7f0;
+    border-left: 5px solid #4caf50;
+    display: none;
+}
+
+.result h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.result p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    button.submit-btn {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}

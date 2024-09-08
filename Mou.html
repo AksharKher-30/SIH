@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+    <title>Memorandum of Understanding (MOU) Form</title>
+    <style>
+        /* Professional font for a legal form */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        /* Container centered with subtle offset from center */
+        .container {
+            max-width: 900px;
+            margin: 50px auto 0;
+            padding: 30px;
+            background-color: #ffffff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+        label {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ecf0f1;
+            border-radius: 6px;
+            background-color: #f5f5f5;
+            font-size: 16px;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+        /* Textareas corrected with proper alignment */
+        textarea {
+            resize: vertical;
+            height: 100px;
+            padding: 12px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        /* Radio button alignment */
+        .radio-group {
+            display: flex;
+            align-items: center;
+        }
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        /* Form inline for date fields */
+        .form-inline {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        button {
+            display: block;
+            width: calc(50% - 20px);
+            padding: 15px;
+            margin: 0 auto 30px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #output {
+            background-color: #ecf0f1;
+            padding: 25px;
+            margin-top: 40px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            white-space: pre-wrap;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            button {
+                width: calc(100% - 20px);
+            }
+            .form-inline {
+                flex-direction: column;
+            }
+        }
+        /* New style for hidden elements */
+        .hidden {
+            display: none;
+        }
+        /* New style for checkbox alignment */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .checkbox-group label {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Memorandum of Understanding (MOU)</h1>
+        <form id="mouForm">
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="effectiveDate">Effective Date</label>
+                    <input type="date" id="effectiveDate" name="effectiveDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="endDate">End Date of Obligations</label>
+                    <input type="date" id="endDate" name="endDate" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="firstPartyName">First Party Name</label>
+                <input type="text" id="firstPartyName" name="firstPartyName" required>
+            </div>
+            <div class="form-group">
+                <label for="firstPartyAddress">First Party Address</label>
+                <textarea id="firstPartyAddress" name="firstPartyAddress" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="secondPartyName">Second Party Name</label>
+                <input type="text" id="secondPartyName" name="secondPartyName" required>
+            </div>
+            <div class="form-group">
+                <label for="secondPartyAddress">Second Party Address</label>
+                <textarea id="secondPartyAddress" name="secondPartyAddress" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="projectDescription">Project Description</label>
+                <textarea id="projectDescription" name="projectDescription" required></textarea>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="deadlineExtension" name="deadlineExtension">
+                <label for="deadlineExtension">Deadline Extensions</label>
+            </div>
+            <div id="deadlineField" class="form-group hidden">
+                <label for="extensionDetails">Extension Details</label>
+                <textarea id="extensionDetails" name="extensionDetails"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="projectObjectives">Main Objectives of the Project</label>
+                <textarea id="projectObjectives" name="projectObjectives" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="firstPartyExpertise">First Party's Unique Experiences and Expertise</label>
+                <textarea id="firstPartyExpertise" name="firstPartyExpertise" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="secondPartyExpertise">Second Party's Unique Experiences and Expertise</label>
+                <textarea id="secondPartyExpertise" name="secondPartyExpertise" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="firstPartyResponsibilities">First Party's Responsibilities</label>
+                <textarea id="firstPartyResponsibilities" name="firstPartyResponsibilities" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="secondPartyResponsibilities">Second Party's Responsibilities</label>
+                <textarea id="secondPartyResponsibilities" name="secondPartyResponsibilities" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="firstPartyResources">First Party's Resources</label>
+                <textarea id="firstPartyResources" name="firstPartyResources" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="secondPartyResources">Second Party's Resources</label>
+                <textarea id="secondPartyResources" name="secondPartyResources" required></textarea>
+            </div>
+            <div class="form-group">
+                <label>Dispute Resolution Method</label>
+                <div class="radio-group">
+                    <input type="radio" id="mediation" name="disputeResolution" value="Mediation" required>
+                    <label for="mediation">Mediation</label>
+                    <input type="radio" id="arbitration" name="disputeResolution" value="Arbitration">
+                    <label for="arbitration">Arbitration</label>
+                    <input type="radio" id="both" name="disputeResolution" value="Mediation and Arbitration">
+                    <label for="both">Mediation and Arbitration</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="governingLaw">Governing Law State</label>
+                <input type="text" id="governingLaw" name="governingLaw" required>
+            </div>
+            <div class="form-group">
+                <label for="terminationNotice">Termination Notice Period (days)</label>
+                <input type="number" id="terminationNotice" name="terminationNotice" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="firstPartySignature">First Party Signature</label>
+                <input type="text" id="firstPartySignature" name="firstPartySignature" required>
+            </div>
+            <div class="form-group">
+                <label for="secondPartySignature">Second Party Signature</label>
+                <input type="text" id="secondPartySignature" name="secondPartySignature" required>
+            </div>
+            <button type="submit">Generate MOU</button>
+            <button type="button" onclick="clearForm()">Clear Form</button>
+        </form>
+        <div id="output"></div>
+    </div>
+    <script>
+        // Toggle Deadline Extension Field
+        document.getElementById('deadlineExtension').addEventListener('change', function () {
+            const deadlineField = document.getElementById('deadlineField');
+            if (this.checked) {
+                deadlineField.classList.remove('hidden');
+            } else {
+                deadlineField.classList.add('hidden');
+            }
+        });
+
+        // Form Submission Event
+        document.getElementById('mouForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Collect form data
+            const state = document.getElementById('state').value;
+            const effectiveDate = document.getElementById('effectiveDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const firstPartyName = document.getElementById('firstPartyName').value;
+            const firstPartyAddress = document.getElementById('firstPartyAddress').value;
+            const secondPartyName = document.getElementById('secondPartyName').value;
+            const secondPartyAddress = document.getElementById('secondPartyAddress').value;
+            const projectDescription = document.getElementById('projectDescription').value;
+            const projectObjectives = document.getElementById('projectObjectives').value;
+            const firstPartyExpertise = document.getElementById('firstPartyExpertise').value;
+            const secondPartyExpertise = document.getElementById('secondPartyExpertise').value;
+            const firstPartyResponsibilities = document.getElementById('firstPartyResponsibilities').value;
+            const secondPartyResponsibilities = document.getElementById('secondPartyResponsibilities').value;
+            const firstPartyResources = document.getElementById('firstPartyResources').value;
+            const secondPartyResources = document.getElementById('secondPartyResources').value;
+            const disputeResolution = document.querySelector('input[name="disputeResolution"]:checked').value;
+            const governingLaw = document.getElementById('governingLaw').value;
+            const terminationNotice = document.getElementById('terminationNotice').value;
+            const firstPartySignature = document.getElementById('firstPartySignature').value;
+            const secondPartySignature = document.getElementById('secondPartySignature').value;
+            const deadlineExtension = document.getElementById('deadlineExtension').checked;
+            const extensionDetails = document.getElementById('extensionDetails').value;
+
+            // Generate MOU Text
+            let mouText = `
+Memorandum of Understanding (MOU)
+
+State: ${state}
+Effective Date: ${effectiveDate}
+End Date of Obligations: ${endDate}
+
+Parties:
+First Party: ${firstPartyName}
+Address: ${firstPartyAddress}
+
+Second Party: ${secondPartyName}
+Address: ${secondPartyAddress}
+
+Project Description:
+${projectDescription}
+
+Project Objectives:
+${projectObjectives}
+
+First Party's Expertise:
+${firstPartyExpertise}
+
+Second Party's Expertise:
+${secondPartyExpertise}
+
+First Party's Responsibilities:
+${firstPartyResponsibilities}
+
+Second Party's Responsibilities:
+${secondPartyResponsibilities}
+
+First Party's Resources:
+${firstPartyResources}
+
+Second Party's Resources:
+${secondPartyResources}
+
+Dispute Resolution Method: ${disputeResolution}
+Governing Law: ${governingLaw}
+Termination Notice Period: ${terminationNotice} days
+
+Deadline Extension: ${deadlineExtension ? 'Yes' : 'No'}
+${deadlineExtension ? 'Extension Details:\n' + extensionDetails : ''}
+
+Signatures:
+First Party Signature: ${firstPartySignature}
+Second Party Signature: ${secondPartySignature}
+            `;
+
+            // Display the generated MOU
+            document.getElementById('output').textContent = mouText;
+        });
+
+        // Clear Form Function
+        function clearForm() {
+            document.getElementById('mouForm').reset();
+            document.getElementById('output').textContent = '';
+            document.getElementById('deadlineField').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+header.hero {
+    height: 100vh;
+    background: url('patent-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+header.hero .overlay {
+    background: #007bff;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Section Styling */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Alternating Background Colors */
+.section:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Lists in Sections */
+ul {
+    text-align: left;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Footer */
+.footer {
+    background: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .section p {
+        font-size: 0.9rem;
+    }
+
+    ul {
+        margin-left:20px;
+    }
+}

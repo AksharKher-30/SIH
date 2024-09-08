@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPR Application Form</title>
+    <link rel="stylesheet" href="apply_patent.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>IPR Application Form</h1>
+        <form action="#" method="post" class="ipr-form">
+            <!-- Type of Applicant -->
+            <div class="form-group">
+                <label for="applicant-type">Type of Applicant:</label>
+                <select id="applicant-type" name="applicant-type" required>
+                    <option value="">Select Type</option>
+                    <option value="natural-person">Natural Person</option>
+                    <option value="agent">Agent</option>
+                    <option value="organisation">Organisation/Legal Entity</option>
+                    <option value="small-entity">Small Entity</option>
+                    <option value="startup">Startup</option>
+                    <option value="educational-institution">Educational Institution</option>
+                </select>
+            </div>
+            
+            <!-- Signature Details -->
+            <div class="form-group">
+                <label>Signature Details:</label>
+                <label><input type="radio" name="signature" value="electronic" required> Electronic Signature</label>
+                <label><input type="radio" name="signature" value="digital" required> Digital Signature</label>
+            </div>
+            
+            <!-- User Details -->
+            <div class="section">
+                <h2>User Details</h2>
+                <div class="form-group">
+                    <label for="user-id">User ID:</label>
+                    <input type="text" id="user-id" name="user-id" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Re-type Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="name">Name of User:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address of User (for e-filing purpose):</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="town">Town/City/District:</label>
+                    <input type="text" id="town" name="town" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State/UT:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                    <label for="pin-code">Pin Code:</label>
+                    <input type="text" id="pin-code" name="pin-code" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Organisational Details -->
+            <div class="section">
+                <h2>Organisational Details</h2>
+                <div class="form-group">
+                    <label for="org-name">Organisation Name:</label>
+                    <input type="text" id="org-name" name="org-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="org-address">Organisation Address:</label>
+                    <textarea id="org-address" name="org-address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="org-town">Town/City/District:</label>
+                    <input type="text" id="org-town" name="org-town" required>
+                </div>
+                <div class="form-group">
+                    <label for="org-state">State/UT:</label>
+                    <input type="text" id="org-state" name="org-state" required>
+                </div>
+                <div class="form-group">
+                    <label for="org-pin-code">Pin Code:</label>
+                    <input type="text" id="org-pin-code" name="org-pin-code" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone No.:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="website">Corporate Website URL:</label>
+                    <input type="url" id="website" name="website" required>
+                </div>
+                <div class="form-group">
+                    <label for="fax">Fax No.:</label>
+                    <input type="text" id="fax" name="fax">
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-actions">
+                <button type="button" class="preview-button">Preview</button>
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

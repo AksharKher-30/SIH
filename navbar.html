@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+    <title>Full-width Dropdown Menu Example</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .nav {
+            display: flex;
+            justify-content: flex-start;
+            padding: 1rem;
+        }
+        .nav-item {
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #f8f8f8;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2rem;
+        }
+        .dropdown.active {
+            display: block;
+        }
+        .dropdown-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .dropdown-section h3 {
+            margin-top: 0;
+        }
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-item" id="solutions-nav">Solutions</div>
+            <!-- Add other nav items here -->
+        </nav>
+        <div class="dropdown" id="solutions-dropdown">
+            <button class="close-btn">&times;</button>
+            <div class="dropdown-content">
+                <div class="dropdown-section">
+                    <h3>Automation</h3>
+                    <p>Intelligent automation for business and IT operations</p>
+                </div>
+                <div class="dropdown-section">
+                    <h3>Data & AI</h3>
+                    <p>Unlock the value of your data with AI</p>
+                </div>
+                <div class="dropdown-section">
+                    <h3>Security</h3>
+                    <p>Protect your business with intelligent security solutions</p>
+                </div>
+                <!-- Add more sections as needed -->
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const solutionsNav = document.getElementById('solutions-nav');
+        const solutionsDropdown = document.getElementById('solutions-dropdown');
+        const closeBtn = solutionsDropdown.querySelector('.close-btn');
+
+        solutionsNav.addEventListener('click', () => {
+            solutionsDropdown.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            solutionsDropdown.classList.remove('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!solutionsDropdown.contains(event.target) && event.target !== solutionsNav) {
+                solutionsDropdown.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

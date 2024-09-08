@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Pitch - Multi-Step Form</title>
+    <link rel="stylesheet" href="mlprojection.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Pitch Your Startup for Government Support</h1>
+            <p>Submit your startup details and tell us why you deserve funding and support.</p>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+
+        <!-- Multi-Step Form -->
+        <form id="startupForm">
+            <!-- Step 1 -->
+            <div class="form-step active">
+                <label for="startup-name">Startup Name</label>
+                <input type="text" id="startup-name" name="startup-name" placeholder="Enter the name of your startup" required>
+
+                <label for="idea">Idea/Concept</label>
+                <input type="text" id="idea" name="idea" placeholder="Describe your startup idea or concept" required>
+
+                <button type="button" onclick="nextStep()">Next</button>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step">
+                <label for="market">Market Place</label>
+                <select id="market" name="market" required>
+                    <option value="">Select Market</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Education">Education</option>
+                </select>
+
+                <label for="description">Detailed Description</label>
+                <textarea id="description" name="description" rows="5" placeholder="Provide a detailed description of your startup" required></textarea>
+
+                <button type="button" onclick="prevStep()">Previous</button>
+                <button type="button" onclick="nextStep()">Next</button>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step">
+                <label for="market-landscape">Market Landscape</label>
+                <textarea id="market-landscape" name="market-landscape" rows="4" placeholder="Describe the market your startup operates in" required></textarea>
+
+                <label for="statistics">Startup Statistics</label>
+                <input type="text" id="statistics" name="statistics" placeholder="Provide key statistics about your startup (e.g., growth rate)" required>
+
+                <button type="button" onclick="prevStep()">Previous</button>
+                <button type="button" onclick="nextStep()">Next</button>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="form-step">
+                <label for="current-investments">Current Investments</label>
+                <input type="text" id="current-investments" name="current-investments" placeholder="Describe current investments in your startup" required>
+
+                <label for="fund-reason">Reasons for Needing Funds/Investment</label>
+                <textarea id="fund-reason" name="fund-reason" rows="4" placeholder="Explain why your startup needs funds or investment" required></textarea>
+
+                <button type="button" onclick="prevStep()">Previous</button>
+                <button type="submit">Submit Your Pitch</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Startup Pitch | Seeking government support for the next big idea</p>
+    </footer>
+
+    <script src="mlprojection.js"></script>
+</body>
+</html>

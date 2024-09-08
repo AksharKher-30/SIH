@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patent Listings</title>
+    <link rel="stylesheet" href="Registered_patents.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Patent Listings</h1>
+        <input type="text" id="searchBar" placeholder="Search for patents..." onkeyup="filterPatents()">
+        <select id="filterCategory" onchange="filterPatents()">
+            <option value="">All Categories</option>
+            <option value="Renewable Energy">Renewable Energy</option>
+            <option value="Medical Devices">Medical Devices</option>
+            <option value="Automotive Technology">Automotive Technology</option>
+            <option value="Consumer Electronics">Consumer Electronics</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Environmental Technology">Environmental Technology</option>
+            <option value="Software and IT">Software and IT</option>
+            <option value="Food Technology">Food Technology</option>
+            <option value="Construction Technology">Construction Technology</option>
+            <option value="Robotics">Robotics</option>
+        </select>
+
+        <ul id="patentList">
+            <li data-category="Renewable Energy">
+                <strong>Title:</strong> Vertical Axis Wind Turbine with Enhanced Blade Design<br>
+                <strong>Inventor(s):</strong> Alex Green, Maria Torres<br>
+                <strong>Application Number:</strong> 2024/RE/001234<br>
+                <strong>Summary:</strong> The turbine uses an elliptical blade shape that maximizes air resistance, improving rotation speed even in low wind conditions.
+            </li>
+            <li data-category="Medical Devices">
+                <strong>Title:</strong> Wearable Glucose Monitoring Patch<br>
+                <strong>Inventor(s):</strong> Dr. Emily Carter, Dr. Rahul Mehta<br>
+                <strong>Application Number:</strong> 2024/MD/002345<br>
+                <strong>Summary:</strong> The patch contains micro-needles that penetrate the skin minimally, drawing interstitial fluid into a sensor chamber.
+            </li>
+            <li data-category="Automotive Technology">
+                <strong>Title:</strong> Adaptive Headlight System for Autonomous Vehicles<br>
+                <strong>Inventor(s):</strong> John Thompson, Lisa Yang<br>
+                <strong>Application Number:</strong> 2024/AT/003456<br>
+                <strong>Summary:</strong> An adaptive headlight system that adjusts beam patterns in real-time based on road conditions, weather, and surrounding traffic.
+            </li>
+            <li data-category="Consumer Electronics">
+                <strong>Title:</strong> Self-Cleaning Smartphone Screen<br>
+                <strong>Inventor(s):</strong> Rachel Moore, Victor Lin<br>
+                <strong>Application Number:</strong> 2024/CE/004567<br>
+                <strong>Summary:</strong> A smartphone screen coated with a hydrophobic and oleophobic material that repels water and oils, keeping the screen clean from fingerprints and smudges.
+            </li>
+            <li data-category="Biotechnology">
+                <strong>Title:</strong> Genetically Engineered Drought-Resistant Crop<br>
+                <strong>Inventor(s):</strong> Dr. Anika Patel, Dr. Carlos Rodriguez<br>
+                <strong>Application Number:</strong> 2024/BT/005678<br>
+                <strong>Summary:</strong> A genetically engineered crop that exhibits enhanced drought resistance through modified root architecture and water retention capabilities.
+            </li>
+        </ul>
+    </div>
+
+    <script src="Registered_patents.js"></script>
+</body>
+</html>

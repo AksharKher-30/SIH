@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Work_on_research.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+    <title>Research Portal</title>
+</head>
+<body>
+    <nav>
+        <div class="navbar" id="navbar">
+            <div class="dropdown_default">
+                Central Library
+            </div>
+            <div class="dropdown">
+                <a href="Mentors.html">Mentors</a>
+            </div>
+            <div class="dropdown">
+                <a href="Collab.html">Collaboration</a>
+            </div>
+            <div class="dropdown">
+                <a href="funds&grants.html">Grants and Funds</a>
+            </div>
+            <div class="dropdown">
+                <a href="Research_progress.html">Track Progress</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <h1>Research Papers</h1>
+            <input type="text" id="searchBar" placeholder="Search for research papers..." onkeyup="filterPapers()">
+            <select id="filterCategory" onchange="filterPapers()">
+                <option value="">All Categories</option>
+                <option value="IT Sector">IT Sector</option>
+                <option value="Space Technology">Space Technology</option>
+                <option value="Health">Health</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Mentorship and Innovation">Mentorship and Innovation</option>
+                <!-- Add other categories here -->
+            </select>
+
+            <ul id="paperList">
+                <li data-category="IT Sector">
+                    <strong>Title:</strong> Digital Transformation in Gujarat<br>
+                    <strong>Summary:</strong> A study on the IT sector growth and the impact of digital transformation in Gujarat.<br>
+                    <button class="read-more" onclick="showModal('modal1')">Read More</button>
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal1')">&times;</span>
+                            <h2>Digital Transformation in Gujarat</h2>
+                            <p>This research paper explores the rapid growth of the IT sector in Gujarat and how digital transformation initiatives have impacted the region's economy and business landscape. It covers key developments, case studies, and future trends expected in the IT industry of Gujarat.</p>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="Space Technology">
+                    <strong>Title:</strong> Contributions of Gujarat in Space Technology<br>
+                    <strong>Summary:</strong> An overview of Gujarat’s contributions to space technology through ISRO and other institutions.<br>
+                    <button class="read-more" onclick="showModal('modal2')">Read More</button>
+                    <div id="modal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal2')">&times;</span>
+                            <h2>Contributions of Gujarat in Space Technology</h2>
+                            <p>This paper provides an in-depth analysis of Gujarat's contributions to space technology, particularly through the work of ISRO's Space Applications Centre and other related institutions. The paper also discusses the state's role in advancing space science education and research.</p>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="Health">
+                    <strong>Title:</strong> Health Initiatives in Gujarat<br>
+                    <strong>Summary:</strong> Analysis of health initiatives like Mukhyamantri Matru Shakti Yojana and their impact on public health.<br>
+                    <button class="read-more" onclick="showModal('modal3')">Read More</button>
+                    <div id="modal3" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal3')">&times;</span>
+                            <h2>Health Initiatives in Gujarat</h2>
+                            <p>This research paper examines various health initiatives in Gujarat, focusing on the Mukhyamantri Matru Shakti Yojana and its effects on maternal and child health in the state. The paper discusses the challenges faced, success stories, and areas for improvement.</p>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="Agriculture">
+                    <strong>Title:</strong> Advancements in Agricultural Technology in Gujarat<br>
+                    <strong>Summary:</strong> An exploration of how modern technology is transforming agriculture in Gujarat.<br>
+                    <button class="read-more" onclick="showModal('modal4')">Read More</button>
+                    <div id="modal4" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal4')">&times;</span>
+                            <h2>Advancements in Agricultural Technology in Gujarat</h2>
+                            <p>This paper discusses the technological advancements in Gujarat's agricultural sector, including the use of smart farming techniques, genetically modified crops, and precision agriculture to increase productivity and sustainability.</p>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="Real Estate">
+                    <strong>Title:</strong> Real Estate Development in Gujarat<br>
+                    <strong>Summary:</strong> A comprehensive study on the growth of the real estate sector in Gujarat.<br>
+                    <button class="read-more" onclick="showModal('modal5')">Read More</button>
+                    <div id="modal5" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal5')">&times;</span>
+                            <h2>Real Estate Development in Gujarat</h2>
+                            <p>This paper examines the factors driving real estate development in Gujarat, including urbanization, infrastructure projects, and regulatory changes like RERA. The paper also covers market trends and future prospects.</p>
+                        </div>
+                    </div>
+                </li>
+                <li data-category="Mentorship and Innovation">
+                    <strong>Title:</strong> Mentorship and Innovation Ecosystem in Gujarat<br>
+                    <strong>Summary:</strong> How mentorship programs are fostering innovation and entrepreneurship in Gujarat.<br>
+                    <button class="read-more" onclick="showModal('modal6')">Read More</button>
+                    <div id="modal6" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('modal6')">&times;</span>
+                            <h2>Mentorship and Innovation Ecosystem in Gujarat</h2>
+                            <p>This research explores the various mentorship programs and innovation hubs in Gujarat that are supporting startups and fostering a culture of entrepreneurship. The paper highlights key initiatives and success stories from the region.</p>
+                        </div>
+                    </div>
+                </li>
+                <!-- Add more research papers as needed -->
+            </ul>
+        </div>
+    </main>
+    <script src="Work_on_research.js"></script>
+</body>
+</html>

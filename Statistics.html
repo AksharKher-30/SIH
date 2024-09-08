@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Funding Tracker</title>
+    <link rel="stylesheet" href="Statistics.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Startup Funding Tracker</h1>
+            <p>Track the financial support you received from the government for your startup</p>
+        </header>
+
+        <form id="funding-form">
+            <!-- Total Government Investment -->
+            <div class="form-group">
+                <label for="total-investment">Total Amount Invested by Government (in USD):</label>
+                <input type="number" id="total-investment" name="totalInvestment" placeholder="Enter total amount" required>
+            </div>
+
+            <!-- Quarterly Funding -->
+            <div class="form-group">
+                <h3>Quarterly Funding Received</h3>
+                <label for="quarter-1">Amount for Quarter 1:</label>
+                <input type="number" id="quarter-1" name="quarter1" placeholder="Amount for first quarter" required>
+                
+                <label for="quarter-2">Amount for Quarter 2:</label>
+                <input type="number" id="quarter-2" name="quarter2" placeholder="Amount for second quarter" required>
+                
+                <label for="quarter-3">Amount for Quarter 3:</label>
+                <input type="number" id="quarter-3" name="quarter3" placeholder="Amount for third quarter" required>
+                
+                <label for="quarter-4">Amount for Quarter 4:</label>
+                <input type="number" id="quarter-4" name="quarter4" placeholder="Amount for fourth quarter" required>
+            </div>
+
+            <!-- Utilized Amount -->
+            <div class="form-group">
+                <label for="used-amount">Current Amount Used (in USD):</label>
+                <input type="number" id="used-amount" name="usedAmount" placeholder="Enter used amount" required>
+            </div>
+
+            <!-- Fund Utilization Description -->
+            <div class="form-group">
+                <label for="utilization-description">Description of Fund Utilization:</label>
+                <textarea id="utilization-description" name="utilizationDescription" rows="4" placeholder="Briefly describe how the funds were used" required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Report</button>
+        </form>
+
+        <!-- Result Section -->
+        <div id="result" class="result">
+            <h2>Summary of Your Funding Report</h2>
+            <p id="summary"></p>
+        </div>
+    </div>
+
+    <script src="Statistics.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Growth Dashboard</title>
+    <link rel="stylesheet" href="Marketplace.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Startup Growth Dashboard</h1>
+    </header>
+
+    <main>
+        <!-- User Input Section -->
+        <section class="input-section">
+            <h2>Input Business Data</h2>
+            <form id="businessDataForm">
+                <label for="sales">Sales (Current Period):</label>
+                <input type="number" id="sales" name="sales" required>
+
+                <label for="acquisition">Customer Acquisition (Current Period):</label>
+                <input type="number" id="acquisition" name="acquisition" required>
+
+                <label for="expenses">Expenses (Current Period):</label>
+                <input type="number" id="expenses" name="expenses" required>
+
+                <label for="investment">Investments (Current Period):</label>
+                <input type="number" id="investment" name="investment" required>
+
+                <h3>Previous Data for Predictive Analysis</h3>
+
+                <label for="prevSales">Sales (Previous Period):</label>
+                <input type="number" id="prevSales" name="prevSales" required>
+
+                <label for="prevAcquisition">Customer Acquisition (Previous Period):</label>
+                <input type="number" id="prevAcquisition" name="prevAcquisition" required>
+
+                <label for="prevExpenses">Expenses (Previous Period):</label>
+                <input type="number" id="prevExpenses" name="prevExpenses" required>
+
+                <label for="prevInvestment">Investments (Previous Period):</label>
+                <input type="number" id="prevInvestment" name="prevInvestment" required>
+
+                <label for="timePeriod">Time Period:</label>
+                <select id="timePeriod" name="timePeriod">
+                    <option value="monthly">Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- KPI Section -->
+        <section class="kpi-section">
+            <h2>Key Performance Indicators (KPIs)</h2>
+            <div class="kpi-cards">
+                <div class="kpi-card">
+                    <h3>Revenue Growth</h3>
+                    <p id="revenueGrowth">0%</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Burn Rate</h3>
+                    <p id="burnRate">$0</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Customer Acquisition Cost (CAC)</h3>
+                    <p id="cac">$0</p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Customer Lifetime Value (CLTV)</h3>
+                    <p id="cltv">$0</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Visualization Section -->
+        <section class="data-visualization-section">
+            <h2>Data Visualization</h2>
+            <canvas id="dataChart"></canvas>
+        </section>
+
+        <!-- Predictive Analytics Section -->
+        <section class="analytics-section">
+            <h2>Predictive Analytics</h2>
+            <div id="analyticsResults">
+                <p>Run predictive models based on input data...</p>
+            </div>
+            <canvas id="predictiveChart"></canvas>
+            <button id="runAnalytics">Run Predictive Analysis</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Startup Dashboard | All Rights Reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="Marketplace.js" defer></script>
+</body>
+
+</html>

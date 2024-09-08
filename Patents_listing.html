@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Patents Listing</title>
+    <link rel="stylesheet" href="Patents_listing.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Innovation Patents Listing</h1>
+        </header>
+        <div class="search-filter-bar">
+            <input type="text" id="search-bar" placeholder="Search for innovations...">
+            <div class="filter-bar">
+                <input type="date" id="filter-start-date" placeholder="Start Date">
+                <input type="date" id="filter-end-date" placeholder="End Date">
+                <input type="text" id="filter-user-id" placeholder="Application No.">
+                <button id="filter-button">Filter</button>
+            </div>
+        </div>
+        <div id="patents-listing">
+            <div class="patent-item">
+                <h2>Innovation 1</h2>
+                <p>Description of Innovation 1</p>
+                <p><strong>Start Date:</strong> 2023-01-01</p>
+                <p><strong>End Date:</strong> 2023-12-31</p>
+                <p><strong>Application ID:</strong> user1</p>
+                <div class="buttons">
+                    <button class="buy-button">Buy</button>
+                    <button class="sell-button">Sell</button>
+                </div>
+            </div><div class="patent-item">
+                <h2>Innovation 2</h2>
+                <p>Description of Innovation 2</p>
+                <p><strong>Start Date:</strong> 2022-01-01</p>
+                <p><strong>End Date:</strong> 2022-12-31</p>
+                <p><strong>Application ID:</strong> user2</p>
+                <div class="buttons">
+                    <button class="buy-button">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Patents_listing.js"></script>
+</body>
+</html>

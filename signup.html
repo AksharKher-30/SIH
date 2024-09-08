@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=quicksand@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h2 {
+        text-align: center;
+    }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 0px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .google-btn {
+            width: 100%;
+            background-color: #0056b3;
+            color: white;
+            padding: 14px 0px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .google-btn:hover {
+            background-color: #c23321;
+        }
+        @media screen and (max-width: 600px) {
+        .login-container {
+            width: 90%;
+            padding: 10px;
+        }
+        input[type="text"], input[type="password"], input[type="email"], input[type="submit"], .google-btn {
+            padding: 12px;
+            margin: 6px 0;
+        }
+        .submit-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Sign </h2>
+    <form action="/submit-your-login-form" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <p style="text-align:center; margin-top:20px;">Already registered? <a href="/login">Sign in</a></p>
+
+        <button type="submit" class="google-btn" onclick="location.href='afterlogin.html';" ><strong>Signup<strong></button>
+    </form>
+    <div class="google-btn" onclick="location.href='/google-sign-in';">Login with Google</div>
+</div>
+
+</body>
+</html>

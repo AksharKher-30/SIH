@@ -1,0 +1,171 @@
+/* General Styles */
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 15px 0;
+    height: 56px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar-right a {
+    position: relative;
+    left: 943px;
+  bottom: 23px;
+  color: gold;
+}
+#hero {
+    background: url('C:/Users/91966/OneDrive/Desktop/Sih web/Firefly Create a modern and visually compelling background image for a startup-focused website ,Mode(3).jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* Ensure text is readable on the background */
+    padding: 100px 20px;
+    text-align: center;
+}
+#hero {
+    background: url('back.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* Ensure text is readable on the background */
+    padding: 100px 20px;
+    text-align: center;
+}
+
+
+
+.hero {
+    color: #171111;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.cta-button {
+    background: #007bff;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: relative;
+    top: 50px;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+/* About Section */
+.about {
+    padding: 60px 0;
+}
+
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+.services {
+    background-size: cover;
+    padding: 60px 0;
+}
+
+.services h2 {
+    margin-bottom: 20px;
+}
+
+.service-item {
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 60px 0;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact button {
+    background: #007bff;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background: #0056b3;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
